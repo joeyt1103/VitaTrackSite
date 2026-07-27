@@ -1,10 +1,352 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url=VitaHome.html">
-  <link rel="canonical" href="VitaHome.html">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VitaTrack — All Your Health, One Place</title>
+  <meta name="description" content="VitaTrack connects workouts, nutrition, hydration, weight, recovery, sleep, and strain in one private, Apple-first health app.">
+  <meta name="theme-color" content="#f4f3ee">
+  <meta name="author" content="Lost Pixel Technology">
+  <link rel="canonical" href="https://joeyt1103.github.io/VitaTrackSite/">
+  <link rel="icon" href="Untitled.png">
+  <link rel="apple-touch-icon" href="Untitled.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VitaTrack — All Your Health, One Place">
+  <meta property="og:description" content="Train, fuel, recover, and understand the full picture—without giving up your data.">
+  <meta property="og:url" content="https://joeyt1103.github.io/VitaTrackSite/">
+  <meta property="og:image" content="https://joeyt1103.github.io/VitaTrackSite/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="VitaTrack — All your health, one place.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VitaTrack — All Your Health, One Place">
+  <meta name="twitter:description" content="One private, Apple-first home for training and health.">
+  <meta name="twitter:image" content="https://joeyt1103.github.io/VitaTrackSite/assets/og.png">
+  <link rel="stylesheet" href="styleSheet.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <a href="VitaHome.html">Click here if not redirected</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <div class="announcement">
+    <span class="announcement-dot" aria-hidden="true"></span>
+    <span>VitaTrack 3.0</span>
+    <span class="announcement-copy">Recovery, Sleep &amp; Strain are here.</span>
+    <a href="https://apps.apple.com/app/id6744783922">See what’s new <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="VitaTrack home">
+        <img src="Untitled.png" width="38" height="38" alt="">
+        <span>VitaTrack</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#intelligence">Intelligence</a>
+        <a href="#tracking">Tracking</a>
+        <a href="#reports">Reports</a>
+        <a href="#privacy">Privacy</a>
+      </div>
+
+      <a class="nav-download" href="https://apps.apple.com/app/id6744783922">
+        <span aria-hidden="true"></span> Download
+      </a>
+
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu" inert>
+      <a href="#intelligence">Intelligence</a>
+      <a href="#tracking">Tracking</a>
+      <a href="#reports">Reports</a>
+      <a href="#privacy">Privacy</a>
+      <a href="https://apps.apple.com/app/id6744783922">Download on the App Store ↗</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-aura hero-aura-one" aria-hidden="true"></div>
+      <div class="hero-aura hero-aura-two" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Built for iPhone + Apple Health</p>
+          <h1 class="reveal" data-delay="70">All your health,<br><span>one place.</span></h1>
+          <p class="hero-lede reveal" data-delay="140">
+            VitaTrack brings your training, fuel, recovery, sleep, hydration, and weight into one clear daily picture—then helps you decide what to do next.
+          </p>
+
+          <div class="hero-actions reveal" data-delay="210">
+            <a class="app-store-button" href="https://apps.apple.com/app/id6744783922">
+              <span class="apple-mark" aria-hidden="true"></span>
+              <span><small>Download on the</small>App Store</span>
+            </a>
+            <a class="text-link" href="#intelligence">Explore VitaTrack <span aria-hidden="true">↓</span></a>
+          </div>
+
+          <ul class="hero-trust reveal" data-delay="280" aria-label="VitaTrack benefits">
+            <li><span aria-hidden="true">✓</span> No account required</li>
+            <li><span aria-hidden="true">✓</span> Private by design</li>
+            <li><span aria-hidden="true">✓</span> Apple Health sync</li>
+          </ul>
+        </div>
+
+        <div class="hero-stage reveal" data-delay="120">
+          <div class="stage-word stage-word-one" aria-hidden="true">RECOVER</div>
+          <div class="stage-word stage-word-two" aria-hidden="true">MOVE</div>
+          <div class="phone phone-hero">
+            <img src="assets/screenshots/home.webp" width="720" height="1565" alt="VitaTrack home dashboard showing a daily health score and activity summary">
+          </div>
+
+          <div class="signal-card signal-recovery" aria-hidden="true">
+            <span class="signal-ring ring-purple">89</span>
+            <span><small>Recovery</small>Ready to push</span>
+          </div>
+          <div class="signal-card signal-strain" aria-hidden="true">
+            <span class="signal-ring ring-red">86</span>
+            <span><small>Strain</small>Above target</span>
+          </div>
+          <div class="signal-card signal-sleep" aria-hidden="true">
+            <span class="signal-ring ring-blue">65</span>
+            <span><small>Sleep</small>5.3 hours</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="signal-marquee" aria-hidden="true">
+        <div class="signal-track">
+          <span>Recovery</span><i>●</i><span>Sleep</span><i>●</i><span>Strain</span><i>●</i>
+          <span>Workouts</span><i>●</i><span>Nutrition</span><i>●</i><span>Hydration</span><i>●</i>
+          <span>Weight</span><i>●</i><span>Recovery</span><i>●</i><span>Sleep</span><i>●</i>
+          <span>Strain</span><i>●</i><span>Workouts</span><i>●</i><span>Nutrition</span><i>●</i>
+          <span>Hydration</span><i>●</i><span>Weight</span><i>●</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="intelligence" id="intelligence">
+      <div class="container">
+        <div class="section-heading section-heading-light">
+          <p class="eyebrow reveal">Health intelligence</p>
+          <h2 class="reveal">Your body is already talking.<br><span>VitaTrack translates.</span></h2>
+          <p class="section-intro reveal">
+            Scores are only useful when they explain themselves. VitaTrack connects Apple Health signals to the way you train, eat, drink, and recover.
+          </p>
+        </div>
+
+        <div class="score-story">
+          <article class="score-copy reveal">
+            <div class="score-step">
+              <span>01</span>
+              <div>
+                <h3>Know your readiness</h3>
+                <p>Recovery brings HRV, resting heart rate, recent strain, and sleep together—plus the drivers behind your score.</p>
+              </div>
+            </div>
+            <div class="score-step">
+              <span>02</span>
+              <div>
+                <h3>See what sleep changed</h3>
+                <p>Understand duration, efficiency, consistency, fragmentation, sleep stages, and the debt you’re carrying.</p>
+              </div>
+            </div>
+            <div class="score-step">
+              <span>03</span>
+              <div>
+                <h3>Train inside the right range</h3>
+                <p>Daily strain, target strain, and training-load balance turn activity into practical guidance.</p>
+              </div>
+            </div>
+          </article>
+
+          <div class="score-screens reveal" data-delay="90">
+            <div class="phone phone-score phone-back">
+              <img src="assets/screenshots/sleep.webp" width="720" height="1565" loading="lazy" alt="VitaTrack Sleep detail showing score, drivers, and sleep stages">
+            </div>
+            <div class="phone phone-score phone-front">
+              <img src="assets/screenshots/recovery.webp" width="720" height="1565" loading="lazy" alt="VitaTrack Recovery detail showing a high score and its contributing signals">
+            </div>
+            <div class="phone phone-score phone-side">
+              <img src="assets/screenshots/strain.webp" width="720" height="1565" loading="lazy" alt="VitaTrack Strain detail showing target strain and training load">
+            </div>
+          </div>
+        </div>
+
+        <div class="metric-strip reveal">
+          <div><strong>HRV</strong><span>Baseline-aware</span></div>
+          <div><strong>RHR</strong><span>Trend context</span></div>
+          <div><strong>Sleep</strong><span>Stages + debt</span></div>
+          <div><strong>Strain</strong><span>Target range</span></div>
+          <div><strong>Stress</strong><span>Daily signal</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tracking" id="tracking">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow reveal">One daily loop</p>
+          <h2 class="reveal">Track less.<br><span>Understand more.</span></h2>
+          <p class="section-intro reveal">
+            Each part of your day stays simple on its own. Together, it becomes the context your health data was missing.
+          </p>
+        </div>
+
+        <article class="feature-panel feature-workouts reveal">
+          <div class="feature-copy">
+            <div class="feature-index">01 / Training</div>
+            <h3>Every set. Every rep. Every win.</h3>
+            <p>Build routines, follow the workout, log weight and reps, track volume, and see personal records without breaking your rhythm.</p>
+            <ul class="feature-points">
+              <li>873+ exercises</li>
+              <li>Program builder</li>
+              <li>Rest timers</li>
+              <li>Apple Watch companion</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <span class="oversize-number" aria-hidden="true">18</span>
+            <div class="phone phone-feature">
+              <img src="assets/screenshots/workouts.webp" width="720" height="1565" loading="lazy" alt="Completed VitaTrack workout with exercises, sets, volume, calories, and a personal record">
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-panel feature-nutrition reveal">
+          <div class="feature-copy">
+            <div class="feature-index">02 / Fuel</div>
+            <h3>Nutrition without the spreadsheet.</h3>
+            <p>Log meals, watch calories and macros move in real time, save favorites, and scan labels when you need to move faster.</p>
+            <ul class="feature-points">
+              <li>Calories + 12 nutrients</li>
+              <li>Protein, carbs, and fat</li>
+              <li>Barcode + label scanning</li>
+              <li>USDA + Open Food Facts</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <span class="oversize-word" aria-hidden="true">FUEL</span>
+            <div class="phone phone-feature">
+              <img src="assets/screenshots/nutrition.webp" width="720" height="1565" loading="lazy" alt="VitaTrack nutrition screen showing calories, meals, and macronutrient progress">
+            </div>
+          </div>
+        </article>
+
+        <div class="feature-split">
+          <article class="feature-card feature-hydration reveal">
+            <div class="feature-card-copy">
+              <div class="feature-index">03 / Hydration</div>
+              <h3>A better reason to refill.</h3>
+              <p>Quick-add your usual drinks, see progress at a glance, and stay aware of rapid intake.</p>
+              <span class="feature-stat">59 <small>oz today</small></span>
+            </div>
+            <div class="phone phone-card">
+              <img src="assets/screenshots/hydration.webp" width="720" height="1565" loading="lazy" alt="VitaTrack hydration screen with daily progress and quick-add drink controls">
+            </div>
+          </article>
+
+          <article class="feature-card feature-weight reveal" data-delay="90">
+            <div class="feature-card-copy">
+              <div class="feature-index">04 / Weight</div>
+              <h3>Follow the trend, not the noise.</h3>
+              <p>Track a smoothed weight trend, pace toward your goal, and keep optional progress photos together.</p>
+              <span class="feature-stat">−0.2 <small>lb / week</small></span>
+            </div>
+            <div class="phone phone-card">
+              <img src="assets/screenshots/weight.webp" width="720" height="1565" loading="lazy" alt="VitaTrack weight screen showing trend, target, and progress photo option">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reports" id="reports">
+      <div class="reports-grid container">
+        <div class="reports-copy">
+          <p class="eyebrow reveal">The bigger picture</p>
+          <h2 class="reveal">A week of signals.<br><span>One useful story.</span></h2>
+          <p class="section-intro reveal">
+            Weekly reports bring recovery, sleep, strain, momentum, workouts, fuel, water, and weight into a recap you can actually act on.
+          </p>
+
+          <div class="report-list reveal">
+            <div><span>01</span><p><strong>Health scores</strong>See recovery, sleep, and strain together.</p></div>
+            <div><span>02</span><p><strong>Momentum</strong>Spot the habits that stayed aligned.</p></div>
+            <div><span>03</span><p><strong>Body view</strong>Zoom out across readiness, weight, fuel, and water.</p></div>
+          </div>
+
+          <a class="outline-button reveal" href="https://apps.apple.com/app/id6744783922">Build your first week <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="report-stage reveal" data-delay="90">
+          <div class="report-badge badge-one" aria-hidden="true">88%<small>Recovery</small></div>
+          <div class="report-badge badge-two" aria-hidden="true">2/7<small>Days trained</small></div>
+          <div class="phone phone-report phone-report-back">
+            <img src="assets/screenshots/body.webp" width="720" height="1565" loading="lazy" alt="VitaTrack Body overview with biology, weight, fuel, water, and momentum cards">
+          </div>
+          <div class="phone phone-report phone-report-front">
+            <img src="assets/screenshots/weekly-report.webp" width="720" height="1565" loading="lazy" alt="VitaTrack weekly report with health scores, momentum, and workout totals">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy" id="privacy">
+      <div class="container privacy-grid">
+        <div class="privacy-mark reveal" aria-hidden="true">
+          <span class="privacy-ring"></span>
+          <span class="privacy-core">LOCAL</span>
+        </div>
+        <div class="privacy-copy">
+          <p class="eyebrow reveal">Private by architecture</p>
+          <h2 class="reveal">Your health belongs on <span>your</span> iPhone.</h2>
+          <p class="section-intro reveal">
+            VitaTrack requires no account and stores personal health data locally on your device. It uses Apple Health only with your permission, and it does not use third-party analytics or tracking tools.
+          </p>
+          <ul class="privacy-list reveal">
+            <li><span>01</span>No sign-in</li>
+            <li><span>02</span>On-device storage</li>
+            <li><span>03</span>No ads or data selling</li>
+            <li><span>04</span>You control Health access</li>
+          </ul>
+          <a class="text-link reveal" href="Privacy Policy.html">Read the privacy policy <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-inner reveal">
+        <img src="Untitled.png" width="88" height="88" alt="">
+        <p class="eyebrow">Train. Fuel. Recover. Repeat.</p>
+        <h2>Make the whole picture<br>your advantage.</h2>
+        <p>Free to start. No account required.</p>
+        <a class="app-store-button app-store-button-light" href="https://apps.apple.com/app/id6744783922">
+          <span class="apple-mark" aria-hidden="true"></span>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="#top">
+        <img src="Untitled.png" width="34" height="34" alt="">
+        <span>VitaTrack</span>
+      </a>
+      <p>Whole-health tracking for iPhone.<br>A Lost Pixel Technology product.</p>
+      <div class="footer-links">
+        <a href="Privacy Policy.html">Privacy</a>
+        <a href="Terms of Service.html">Terms</a>
+        <a href="https://apps.apple.com/app/id6744783922">App Store ↗</a>
+      </div>
+      <p class="footer-note">VitaTrack is not a medical device and does not provide medical advice.</p>
+    </div>
+  </footer>
 </body>
 </html>
