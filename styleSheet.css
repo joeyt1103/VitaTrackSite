@@ -231,6 +231,11 @@ ul {
   color: var(--ink-strong);
 }
 
+.nav-links a[aria-current="location"] {
+  color: var(--ink-strong);
+  font-weight: 600;
+}
+
 .nav-download {
   justify-self: end;
   min-height: 32px;
@@ -401,11 +406,12 @@ section {
 }
 
 .phone-hero {
+  --phone-shift: 0px;
   position: absolute;
   inset: 0;
   width: 352px;
   margin: auto;
-  transform: translateY(8px);
+  transform: translateY(calc(8px + var(--phone-shift)));
 }
 
 .section-heading {
@@ -526,19 +532,22 @@ section {
 }
 
 .phone-back {
+  --phone-shift: 0px;
   inset-inline-start: 2%;
-  transform: translateY(-48%) rotate(-5deg) scale(0.92);
+  transform: translateY(calc(-48% + var(--phone-shift))) rotate(-5deg) scale(0.92);
 }
 
 .phone-front {
+  --phone-shift: 0px;
   inset-inline-start: 50%;
   z-index: 3;
-  transform: translate(-50%, -52%);
+  transform: translate(-50%, calc(-52% + var(--phone-shift)));
 }
 
 .phone-side {
+  --phone-shift: 0px;
   inset-inline-end: 2%;
-  transform: translateY(-48%) rotate(5deg) scale(0.92);
+  transform: translateY(calc(-48% + var(--phone-shift))) rotate(5deg) scale(0.92);
 }
 
 .metric-strip {
@@ -676,11 +685,12 @@ section {
 }
 
 .phone-feature {
+  --phone-shift: 0px;
   position: absolute;
   inset: auto 50% -285px auto;
   z-index: 2;
   width: 350px;
-  transform: translateX(50%);
+  transform: translateX(50%) translateY(var(--phone-shift));
 }
 
 .feature-split {
@@ -731,10 +741,11 @@ section {
 }
 
 .phone-card {
+  --phone-shift: 0px;
   position: absolute;
   inset: auto 50% -440px;
   width: 330px;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(var(--phone-shift));
 }
 
 .reports {
@@ -811,14 +822,16 @@ section {
 }
 
 .phone-report-front {
+  --phone-shift: 0px;
   inset-inline-start: 40%;
   z-index: 3;
-  transform: translate(-50%, -52%) rotate(-4deg);
+  transform: translate(-50%, calc(-52% + var(--phone-shift))) rotate(-4deg);
 }
 
 .phone-report-back {
+  --phone-shift: 0px;
   inset-inline-end: 3%;
-  transform: translateY(-48%) rotate(5deg) scale(0.92);
+  transform: translateY(calc(-48% + var(--phone-shift))) rotate(5deg) scale(0.92);
 }
 
 .privacy {
@@ -986,12 +999,19 @@ section {
 
 .js .reveal {
   opacity: 0;
+  visibility: hidden;
 }
 
 .js .reveal.is-visible {
   opacity: 1;
-  transition: opacity 300ms ease;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 420ms var(--ease), transform 520ms var(--ease);
   transition-delay: var(--delay, 0ms);
+}
+
+[data-magnetic] {
+  will-change: transform;
 }
 
 @media (max-width: 1040px) {
@@ -1441,6 +1461,7 @@ section {
 
   .js .reveal {
     opacity: 1;
+    visibility: visible;
     transform: none;
   }
 }
