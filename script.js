@@ -64,6 +64,28 @@ document.documentElement.classList.add("js");
   });
 
   const revealItems = [...document.querySelectorAll(".reveal")];
+  const navLinks = [...document.querySelectorAll(".nav-links a, .mobile-menu a")];
+  const navigationSections = [...document.querySelectorAll("main section[id]")];
+
+  const updateCurrentNavigation = () => {
+    const marker = window.innerHeight * 0.44;
+    const activeSection = navigationSections.find((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.top <= marker && rect.bottom > marker;
+    });
+    const activeHash = activeSection ? `#${activeSection.id}` : "";
+
+    navLinks.forEach((link) => {
+      if (activeHash !== "#top" && link.hash === activeHash) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  updateCurrentNavigation();
+  window.addEventListener("scroll", updateCurrentNavigation, { passive: true });
 
   const revealWithoutGSAP = () => {
     if (reducedMotion || !("IntersectionObserver" in window)) {
@@ -273,24 +295,6 @@ document.documentElement.classList.add("js");
     });
 
     return () => cleanups.forEach((cleanup) => cleanup());
-  });
-
-  const navLinks = [...document.querySelectorAll(".nav-links a, .mobile-menu a")];
-
-  document.querySelectorAll("main section[id]").forEach((section) => {
-    const matchingLinks = navLinks.filter((link) => link.hash === `#${section.id}`);
-    if (!matchingLinks.length) return;
-
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top 44%",
-      end: "bottom 44%",
-      onToggle: ({ isActive }) => {
-        if (!isActive) return;
-        navLinks.forEach((link) => link.removeAttribute("aria-current"));
-        matchingLinks.forEach((link) => link.setAttribute("aria-current", "location"));
-      }
-    });
   });
 
   window.addEventListener(
