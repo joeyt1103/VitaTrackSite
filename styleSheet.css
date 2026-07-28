@@ -9,7 +9,7 @@
   --muted-strong: #515154;
   --line: #d2d2d7;
   --line-soft: #e8e8ed;
-  --purple: #8b31f4;
+  --purple: #8c38ed;
   --purple-deep: #6f20d1;
   --purple-ink: #7418da;
   --purple-light: #caa7ff;
@@ -17,13 +17,17 @@
   --blue: #0071e3;
   --blue-ink: #0066cc;
   --blue-soft: #e8f5ff;
-  --green: #2bc85a;
+  --cyan: #32ade6;
+  --cyan-ink: #006b8f;
+  --cyan-soft: #e8f7fc;
+  --green: #34c759;
   --green-ink: #147a3c;
   --green-soft: #e9f9ee;
   --orange: #ff9500;
   --orange-ink: #8a4b00;
   --orange-soft: #fff2df;
-  --red: #d92d20;
+  --strain: #ff523d;
+  --state-over: #d92d20;
   --sleep-indigo: #5856d6;
   --dark: #000;
   --dark-surface: #161617;
@@ -37,9 +41,9 @@
   --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
   --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
   --radius-sm: 12px;
-  --radius-md: 24px;
-  --radius-lg: 24px;
-  --radius-xl: 28px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -329,7 +333,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 11px;
-  border-radius: 14px;
+  border-radius: var(--radius-sm);
   background: var(--ink-strong);
   color: var(--paper);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
@@ -705,7 +709,7 @@ section {
 }
 
 .feature-hydration {
-  background: var(--blue-soft);
+  background: var(--cyan-soft);
 }
 
 .feature-weight {
@@ -713,7 +717,7 @@ section {
 }
 
 .feature-hydration .feature-index {
-  color: var(--blue-ink);
+  color: var(--cyan-ink);
 }
 
 .feature-weight .feature-index {
@@ -804,7 +808,7 @@ section {
   margin-top: 28px;
   padding: 0 18px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   background: var(--paper);
 }
 
@@ -991,8 +995,10 @@ section {
 }
 
 .score-step > span,
-.metric-strip strong,
-.feature-stat {
+.feature-index,
+.feature-stat,
+.report-list > div > span,
+.privacy-list li > span {
   font-variant-numeric: lining-nums tabular-nums;
   font-feature-settings: "lnum" 1, "tnum" 1;
 }
